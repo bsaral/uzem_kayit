@@ -1,5 +1,7 @@
+<div class = " konum">
+<div class = "span4">
 <p id="notice"><%= notice %></p>
-
+<div class = "yazi">
 <p>
   <b>Name:</b>
   <%= @form.name %>
@@ -20,7 +22,7 @@
   <%= @form.telephone %>
 </p>
 
-<p>
+<p style = "width:30px;">
   <b>Address:</b>
   <%= @form.address %>
 </p>
@@ -38,8 +40,17 @@
 <p>
   <b>Program:</b>
   <%= @form.program %>
-</p>
+</p></br></br>
+<%= image_tag("ok.png", :class => "resim") %>
 
+<div class="alert alert-error" id = "resim_yazi">
+	<%= flash[:success] = "Formunuz Başarıyla Kaydedilmiştir." %>
+</div>
+	
+</div>
 
-<%= link_to 'Edit', edit_form_path(@form) %> |
-<%= link_to 'Back', forms_path %>
+<%= button_to 'Edit', edit_form_path(@form) , class: "btn btn-primary" ,style: "width:100px;" %> 
+<%= button_to 'Back', new_form_path ,class: "btn btn-warning" ,style: "width:100px;position:relative;top:-52px;left:120px;" %>
+</div>
+</div>	
+
