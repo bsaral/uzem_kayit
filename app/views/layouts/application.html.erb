@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ön kayıt sistemi</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          
+          <a class="brand" href="/" >ÖN KAYIT VE TALEP FORMU</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="/">Ana Sayfa</a></li>
+            </ul>
+            <ul class="nav pull-right" >
+				
+				<li> <% if flash[:error] %>
+				  <div class="alert alert-error">
+					<%= flash[:error] %>
+				  </div>
+				<% end %>
+				</li>
+			  <ul>
+            </div>
+            
+          </div><!--/.nav-collapse -->
+          
+          
+        </div>
+        
+      </div>
+
+   
+   
+    <%= yield %>
+    
+  
+
+</body>
+</html>

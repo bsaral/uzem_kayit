@@ -1,0 +1,42 @@
+<div class = "container">
+	<div class = "tablo_konum">
+
+<h1>Listing forms</h1>
+
+<table class = table table-bordered table-striped table-hover">
+  <tr>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Email</th>
+    <th>Telephone</th>
+    <th>Address</th>
+    <th>Country</th>
+    <th>Institution</th>
+    <th>Program</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @forms.each do |form| %>
+  <tr>
+    <td><%= form.name %></td>
+    <td><%= form.surname %></td>
+    <td><%= form.email %></td>
+    <td><%= form.telephone %></td>
+    <td><%= form.address %></td>
+    <td><%= form.country %></td>
+    <td><%= form.institution %></td>
+    <td><%= form.program %></td>
+    <td><%= button_to 'Show', form ,class: "btn btn-primary" %></td>
+    <td><%= button_to 'Edit', edit_form_path(form),class: "btn  btn-warning" %></td>
+    <td><%= button_to 'Destroy', form, confirm: 'Are you sure?', method: :delete , class: "btn btn-info" %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+</div>
+</div>

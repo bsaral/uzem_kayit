@@ -1,0 +1,60 @@
+
+	<div class = " konum">
+		<%= form_for(@form) do |f| %>
+		  <% if @form.errors.any? %>
+			<div id="error_explanation">
+			  <h2><%= pluralize(@form.errors.count, "error") %> prohibited this form from being saved:</h2>
+
+			  <ul>
+			  <% @form.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			  <% end %>
+			  </ul>
+			</div>
+		  <% end %>
+
+		  <div class="field">
+			<%= f.label :name %><br />
+			<%= f.text_field :name , style: "width:6in;"  %>
+		  </div>
+		  <div class="field">
+			<%= f.label :surname %><br />
+			<%= f.text_field :surname , style: "width:6in;" %>
+		  </div>
+		  <div class="field">
+			<%= f.label :email %><br />
+			<%= f.text_field :email , style: "width:6in;" %>
+		  </div>
+		  <div class="field">
+			<%= f.label :telephone %><br />
+			<%= f.number_field :telephone , style: "width:6in;" %>
+		  </div>
+		  <div class="field">
+			<%= f.label :address %><br />
+			<%= f.text_area :address , style: "width:6in;height:200px;" %>
+		  </div>
+		  <div class="field">
+			<%= f.label :country %><br />
+			<%= f.text_field :country , style: "width:6in;"%>
+		  </div>
+		  <div class="field">
+			<%= f.label :institution %><br />
+			<%= f.text_field :institution , style: "width:6in;" %>
+		  </div>
+		  <div class="field">
+			<%= f.label :program %><br />
+			<%= f.text_field :program , style: "width:6in;" %>
+		  </div>
+		  <div class="actions">
+			<%= f.submit 'Save', class: "btn btn-primary" ,style:"width:100px;" %>
+		  </div>
+		<% end %>
+	
+
+<div class = "well.navbar-fixed-bottom">
+      
+        <span class ="copyright">  </span></br></br>
+        
+</div>
+     
+   
