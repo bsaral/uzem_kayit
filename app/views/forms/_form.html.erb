@@ -6,6 +6,9 @@
   function show(){
          jQuery("div.gizli").hide(100);
 	 }
+  
+  var addresspicker = $( "#addresspicker" ).addresspicker();
+  
 </script>
 <div class = " konum">
 	<%= form_for @form ,:html => {:name => 'form_ismi'} do |f| %>
@@ -22,20 +25,20 @@
 	  <% end %>
 
 	  <div class="field">
-		<%= f.label :name %><br />
+		<%= f.label "name  *" %><br />
 		<%= f.text_field :name , style: "width:6in;"  %>
 	  </div>
 	  <div class="field">
-		<%= f.label :surname %><br />
+		<%= f.label "surname  *" %><br />
 		<%= f.text_field :surname , style: "width:6in;" %>
 	  </div>
 	  <div class="field">
-		<%= f.label :email %><br />
+		<%= f.label "email  *" %><br />
 		<%= f.text_field :email , style: "width:6in;" %>
 	  </div>
 	  <div class="field">
 		<%= f.label :telephone %><br />
-		<%= f.number_field :telephone , style: "width:6in;" %>
+		<%= f.text_field :telephone , style: "width:6in;" %>
 	  </div>
 	  <div class="field">
 		<%= f.label :address %><br />
@@ -50,7 +53,7 @@
 		<%= f.text_field :institution , style: "width:6in;" %>
 	  </div>
 	  <div class="field">
-		<%= f.label :program %><br />
+		<%= f.label "program  *" %><br />
 		<% @programs = {'Sağlık Kurumları Yönetimi Yüksek Lisans Programı' => 1, 'Acil Tıp Hemşireliği Yüksek Lisans Programı' => 2, 'Evde Bakım Hemşireliği Yüksek Lisans Programı' => 3, 'Diger Secenek' => 4} %>
 		<%= f.select :program ,  \
 			options_for_select(@programs.keys),\

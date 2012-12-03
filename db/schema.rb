@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20121203014958) do
     t.string   "name"
     t.string   "surname"
     t.string   "email"
-    t.integer  "telephone"
+    t.string   "telephone"
     t.text     "address"
     t.string   "country"
     t.string   "institution"
