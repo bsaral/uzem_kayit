@@ -25,7 +25,9 @@ class FormsController < ApplicationController
   # GET /forms/new.json
   def new
     @form = Form.new
-
+    if @form.program == "Diger Secenek"
+		@form.update_attribute(:program, @form.new_program)
+	end
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @form }
@@ -36,6 +38,9 @@ class FormsController < ApplicationController
   # GET /forms/1/edit
   def edit
     @form = Form.find(params[:id])
+    if @form.program == "Diger Secenek"
+		@form.update_attribute(:program, @form.new_program)
+	end
   end
 
   # POST /forms
@@ -43,7 +48,6 @@ class FormsController < ApplicationController
   def create
     @form = Form.new(params[:form])
     
-
     respond_to do |format|
       if @form.save
         format.html { redirect_to @form, notice: 'Form was successfully created.' }
@@ -55,13 +59,17 @@ class FormsController < ApplicationController
         format.js
       end
     end
+    
+     if @form.program == "Diger Secenek"
+		@form.update_attribute(:program, @form.new_program)
+	end
   end
 
   # PUT /forms/1
   # PUT /forms/1.json
   def update
     @form = Form.find(params[:id])
-
+	
     respond_to do |format|
       if @form.update_attributes(params[:form])
         format.html { redirect_to @form, notice: 'Form was successfully updated.' }
@@ -71,6 +79,9 @@ class FormsController < ApplicationController
         format.json { render json: @form.errors, status: :unprocessable_entity }
       end
     end
+    if @form.program == "Diger Secenek"
+		@form.update_attribute(:program, @form.new_program)
+	end
   end
 
   # DELETE /forms/1

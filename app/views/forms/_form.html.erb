@@ -51,29 +51,23 @@
 	  </div>
 	  <div class="field">
 		<%= f.label :program %><br />
-		<% @programs = {'Sağlık Kurumları Yönetimi Yüksek Lisans Programı' => 1, 'Acil Tıp Hemşireliği Yüksek Lisans Programı' => 2, 'Evde Bakım Hemşireliği Yüksek Lisans Programı' => 3, 'Diğer Seçenek' => 4} %>
+		<% @programs = {'Sağlık Kurumları Yönetimi Yüksek Lisans Programı' => 1, 'Acil Tıp Hemşireliği Yüksek Lisans Programı' => 2, 'Evde Bakım Hemşireliği Yüksek Lisans Programı' => 3, 'Diger Secenek' => 4} %>
 		<%= f.select :program ,  \
 			options_for_select(@programs.keys),\
-			{}, :onchange => "if( this.options[selectedIndex].text == 'Diğer Seçenek' ) {gizli()} else {show()}" %>
+			{}, :onchange => "if( this.options[selectedIndex].text == 'Diger Secenek' ) {gizli()} else {show()}" %>
 		<div class = "gizli">
 			<div class="field">
 				<%= f.text_field :new_program , style: "width:6in;"%>
 			</div>
 		</div>
-			
-		
-		
 	  </div>
 	  <div class="actions">
 		<%= f.submit 'Save', class: "btn btn-primary" ,style:"width:100px;"  %>
 	  </div>
 	<% end %>
 	
-
 <div class = "well.navbar-fixed-bottom">
-      
-        <span class ="copyright">  </span></br></br>
-        
+      <span class ="copyright">  </span></br></br>
 </div>
      
    

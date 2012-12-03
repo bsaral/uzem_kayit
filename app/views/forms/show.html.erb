@@ -1,55 +1,50 @@
 <div class = " konum">
-<p id="notice"><%= notice %></p>
-<div class = "yazi">
-<p>
-  <b>Name:</b>
-  <%= @form.name %>
-</p>
+	<div class = "yazi">
+	<p>
+	  <b>Name:</b>
+	  <%= @form.name %>
+	</p>
 
-<p>
-  <b>Surname:</b>
-  <%= @form.surname %>
-</p>
+	<p>
+	  <b>Surname:</b>
+	  <%= @form.surname %>
+	</p>
 
-<p>
-  <b>Email:</b>
-  <%= @form.email %>
-</p>
+	<p>
+	  <b>Email:</b>
+	  <%= @form.email %>
+	</p>
 
-<p>
-  <b>Telephone:</b>
-  <%= @form.telephone %>
-</p>
+	<p>
+	  <b>Telephone:</b>
+	  <%= @form.telephone %>
+	</p>
 
-<p style = "width:30px;">
-  <b>Address:</b>
-  <%= @form.address %>
-</p>
+	<p style = "width:30px;">
+	  <b>Address:</b>
+	  <%= @form.address %>
+	</p>
 
-<p>
-  <b>Country:</b>
-  <%= @form.country %>
-</p>
+	<p>
+	  <b>Country:</b>
+	  <%= @form.country %>
+	</p>
 
-<p>
-  <b>Institution:</b>
-  <%= @form.institution %>
-</p>
+	<p>
+	  <b>Institution:</b>
+	  <%= @form.institution %>
+	</p>
 
-<p>
-  <b>Program:</b>
-  <%= @form.program %>
-</p></br></br>
-<%= image_tag("ok.png", :class => "resim") %>
+	<p>
+	  <b>Program:</b>
+	  <%= @form.program %>
+	</p></br></br>
+	<%= image_tag("ok.png", :class => "resim") %>
+		
+	</div>
 
-<div class="alert alert-error" id = "resim_yazi">
-	<%= flash[:success] = "Formunuz Başarıyla Kaydedilmiştir." %>
-</div>
-	
-</div>
-
-<%= button_to 'Edit', edit_form_path(@form) , class: "btn btn-primary" ,style: "width:100px;" %> 
-<%= button_to 'Back', new_form_path ,class: "btn btn-warning" ,style: "width:100px;position:relative;top:-52px;left:120px;" %>
+	<%= button_to 'Edit', edit_form_path(@form) , class: "btn btn-primary" ,style: "width:100px;" %> 
+	<%= button_to 'Back', root_url ,class: "btn btn-warning" ,style: "width:100px;position:relative;top:-52px;left:120px;" %>
 </div>
 	
 
