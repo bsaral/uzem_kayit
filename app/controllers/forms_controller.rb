@@ -29,6 +29,7 @@ class FormsController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @form }
+      format.js
     end
   end
 
@@ -41,14 +42,17 @@ class FormsController < ApplicationController
   # POST /forms.json
   def create
     @form = Form.new(params[:form])
+    
 
     respond_to do |format|
       if @form.save
         format.html { redirect_to @form, notice: 'Form was successfully created.' }
         format.json { render json: @form, status: :created, location: @form }
+        format.js
       else
         format.html { render action: "new" }
         format.json { render json: @form.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
