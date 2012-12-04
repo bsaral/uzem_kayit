@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class FormsController < ApplicationController
+
   # GET /forms
   # GET /forms.json
   def index

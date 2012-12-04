@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+User.create(:username => "admin", :password => "uzem",:password_confirmation => "uzem")
+
 Country.create([
                       
                             {name: "Adana"},
