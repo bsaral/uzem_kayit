@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class FormsController < ApplicationController
   # GET /forms
   # GET /forms.json
@@ -25,7 +27,7 @@ class FormsController < ApplicationController
   # GET /forms/new.json
   def new
     @form = Form.new
-    if @form.program == "Diger Secenek"
+    if @form.program == "Diğer Seçenek"
 		@form.update_attribute(:program, @form.new_program)
 	end
     respond_to do |format|
@@ -38,7 +40,7 @@ class FormsController < ApplicationController
   # GET /forms/1/edit
   def edit
     @form = Form.find(params[:id])
-    if @form.program == "Diger Secenek"
+    if @form.program == "Diğer Seçenek"
 		@form.update_attribute(:program, @form.new_program)
 	end
   end
@@ -60,7 +62,7 @@ class FormsController < ApplicationController
       end
     end
     
-     if @form.program == "Diger Secenek"
+     if @form.program == "Diğer Seçenek"
 		@form.update_attribute(:program, @form.new_program)
 	end
   end
@@ -79,7 +81,7 @@ class FormsController < ApplicationController
         format.json { render json: @form.errors, status: :unprocessable_entity }
       end
     end
-    if @form.program == "Diger Secenek"
+    if @form.program == "Diğer Seçenek"
 		@form.update_attribute(:program, @form.new_program)
 	end
   end

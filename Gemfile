@@ -11,6 +11,7 @@ gem "mini_magick"
 gem 'sqlite3'
 gem 'execjs'
 gem 'therubyracer'
+gem 'country_select'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
