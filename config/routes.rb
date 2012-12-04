@@ -4,7 +4,8 @@ Exam::Application.routes.draw do
 	resources :forms
 	match "/forms/:id/edit" => "forms#edit"
 	match "/forms/:id" => "forms#show"
-	match "admin" => "forms#index" 
+	match "admin" => "forms#index"
+	match "finish" => "forms#back" 
 	get "sessions/new"
 	get "login" => "sessions#new", :as => "login"
 	match "logout" => "sessions#destroy"
